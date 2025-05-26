@@ -1,0 +1,10 @@
+<div *ngIf="drones.length > 0; else noDrones">
+  <ul>
+    <li *ngFor="let drone of drones">
+      {{ drone.modele }} - {{ drone }}
+    </li>
+  </ul>
+</div>
+<ng-template #noDrones>
+  <p>Aucun drone disponible.</p>
+</ng-template>
